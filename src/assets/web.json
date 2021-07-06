@@ -1,0 +1,8 @@
+[
+    {"courseId":106, "courseName":"HTML","coursePrice":20000,"courseDescrption":"HTML training for 25 days","courseImg":"assets/html.jpg"},
+    {"courseId":107, "courseName":"CSS","coursePrice":15000,"courseDescrption":"CSS training for 15 days","courseImg":"assets/css.jpg"},
+    {"courseId":108, "courseName":"java script","coursePrice":30000,"courseDescrption":"java script training for 60 days","courseImg":"assets/js.jpg"},
+    {"courseId":109, "courseName":"angular","coursePrice":25000,"courseDescrption":"angular training for 50 days","courseImg":"assets/angular.jpg"},
+    {"courseId":110, "courseName":"boot strap","coursePrice":10000,"courseDescrption":"boot strap for 50 days","courseImg":"assets/bootstrap.jpg"}
+
+]

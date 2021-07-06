@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+.myclass1{
+    color: navy;
+    font-size: 30px;
+}
+.myclass2{
+    background-color: paleturquoise;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.myclass3{
+    color: grey;
+    font-size: 30px;
+}
+.myclass4{
+    background-color: lemonchiffon;
+    font-family: Arial, Helvetica, sans-serif;
+}

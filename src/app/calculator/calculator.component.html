@@ -1,0 +1,11 @@
+<p>calculator works!</p>
+
+<pre>
+    FirstNumber: <input type='text' [(ngModel)]='number1'><br>
+    SecondNumber: <input type='text' [(ngModel)]='number2'><br>
+    Result:<input type='text' [(ngModel)]='number3'>
+    <input type="button" value='add' id="button" (click)="operation('+')">
+    <input type="button" value='sub' id="button" (click)="operation('-')">
+    <input type="button" value='mul' id="button" (click)="operation('*')">
+    <input type="button" value='div' id="button" (click)="operation('/')">
+</pre>

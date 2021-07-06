@@ -1,0 +1,9 @@
+<p>first sibling works!</p>
+<table border="2">
+<tr *ngFor='let customer of customerss'>
+<td>{{customer.empId}} </td>
+<td>{{customer.empName}}</td>
+<td>{{customer.salary}}</td>
+</tr>
+</table>
+<button (click)='modifiedData()'>Click Here</button>

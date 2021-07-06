@@ -1,0 +1,57 @@
+<h2>Java Courses Works!</h2><hr>
+  <div>
+  <table border="2" style="width: 100%; height: 100%;">
+    <tr>
+        <td colspan="3">
+        <input type="text" class="form-control" placeholder="Search Course Name" [(ngModel)]="filteredString"/>
+        </td>
+        <td colspan="2">
+            <select  class="form-control" [(ngModel)]='sortby'> 
+                <option [value]='1'>
+                    SortbyName
+                </option>
+                <option [value]='2'>
+                    SortbyPrice
+                </option>
+                
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th class="bg-success text-white">
+            Course Id
+        </th>
+        <th class="bg-success text-white">
+            Course Name
+        </th>
+        <th class="bg-primary text-white">
+            Course Price
+        </th>
+        <th class="bg-primary text-white">
+            Course Descrption
+        </th>
+        <th class="bg-success text-white">
+            Course Img
+        </th>
+    </tr>
+    <tr appMycolor *ngFor="let Course of courses | coursesearch:filteredString | coursesort:sortby">
+
+        <td  class="bg-success text-white">
+            {{Course.courseId}}
+     </td>
+     <td  class="bg-success text-white">
+         {{Course.courseName | titlecase}}
+  </td>
+  <td  class="bg-primary text-white">
+     {{Course.coursePrice | currency:'INR'}}
+</td>
+<td   class="bg-primary text-white">
+ {{Course.courseDescrption | lowercase}}
+</td>
+<td  class="bg-success text-white">
+ <img [src]="Course.courseImg" height="70px" width="90px">
+</td>
+ </tr>
+</table>
+</div>
+{{errMsg | json}}

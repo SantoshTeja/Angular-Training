@@ -1,0 +1,16 @@
+<h2>Reactvie Forms</h2><hr>
+<div class="container">
+<form [formGroup]='productForm' (ngSubmit)='submitData()'>
+    <div class='form-group'>
+        <label>Product Name</label>
+        <input type='text' formControlName='productName' class='form-control'>
+    </div>
+
+    <div *ngIf="productForm.get('productName')?.invalid && productForm.get('productName')?.touched">
+        <div *ngIf="productForm.get('productName')?.errors?.required" class='text text-danger'>ProductName is required</div>
+        <div *ngIf="productForm.get('productName')?.errors?.pattern" class='text text-danger'>Invalid Product Name (It must be b/w 5 to 9) </div>
+    </div>
+    <button [disabled]='!productForm.valid' type='submit' class='btn btn-success'>Submit</button>
+</form>
+</div>
+

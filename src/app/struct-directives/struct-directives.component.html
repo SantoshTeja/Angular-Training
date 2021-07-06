@@ -1,0 +1,29 @@
+<h2>struct-directives works!</h2>
+<hr>
+
+<!-- <ul *ngFor='let employee of employees'>
+    <li>{{employee.empId}} {{employee.empName}}</li>
+</ul> -->
+<div class="container">
+<table class='table'>
+    <tr *ngIf='employees.length>0'>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+
+    </tr>
+    <tr *ngFor='let employee of employees'>
+        <td>{{employee.empId}}</td>
+        <td>{{ employee.empName | titlecase}}</td>
+        <td>{{ employee.salary}}</td>
+
+    </tr>
+</table>
+</div>
+
+{{errMsg | json}}
+<!-- {{errMsg | json} -->
+<!-- {{employees | json}} -->
+
+
+

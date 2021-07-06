@@ -1,0 +1,14 @@
+<p>pipes works!</p>
+<pre>
+    name: {{name | myuppercase}}
+    name in uppercase : {{name | uppercase}}
+    name in lowercase : {{name | lowercase}}
+    name in titlecase : {{name | titlecase}}
+    part of name      :  {{name | slice:0:6}}
+    today             :  {{today}}
+    today             :  {{today | date}}
+    today             :  {{today | date:'fullDate'}}
+    today              : {{today | date:'dd/MM/yyyy hh:mm:ss'}}
+    Json               : {{customer}}
+    Json               : {{customer | json}}
+</pre>
