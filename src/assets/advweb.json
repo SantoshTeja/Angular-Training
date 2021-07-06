@@ -1,0 +1,6 @@
+[
+   
+    {"courseId":109, "courseName":"angularjs","coursePrice":25000,"courseDescrption":"angular training for 50 days","courseImg":"assets/angular.jpg"},
+    {"courseId":110, "courseName":"node js","coursePrice":10000,"courseDescrption":"node js training for 50 days","courseImg":"assets/nodejs.jpg"}
+
+]

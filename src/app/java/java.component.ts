@@ -8,14 +8,4 @@ import { JavaService } from '../services/java.service';
 })
 export class JavaComponent {
 
-  filteredString:string='';
-  sortby:any='1';
-  courses:any=[];
-  errMsg:any;
-  constructor(proService:JavaService){
-    proService.getalljavacourse().subscribe(
-      result => this.courses = result,
-      error => this.errMsg = error
-    )
-    }
 }

@@ -1,0 +1,6 @@
+[
+    
+    {"courseId":104, "courseName":"spring boot","coursePrice":25000,"courseDescrption":"spring boot training for 40 days","courseImg":"assets/springboot.jpg"},
+    {"courseId":103, "courseName":"microservices","coursePrice":15000,"courseDescrption":"microservices training for 20 days","courseImg":"assets/microservices.jpg"}
+
+]

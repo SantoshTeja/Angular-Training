@@ -34,6 +34,10 @@ import { Sibling2Component } from './sibling2/sibling2.component';
 import { ReactFormsComponent } from './react-forms/react-forms.component';
 import { ReactForms1Component } from './react-forms1/react-forms1.component';
 import { TempDrivenFormComponent } from './temp-driven-form/temp-driven-form.component';
+import { CorejavaComponent } from './corejava/corejava.component';
+import { CorewebComponent } from './coreweb/coreweb.component';
+import { AdvjavaComponent } from './advjava/advjava.component';
+import { AdvwebComponent } from './advweb/advweb.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +72,10 @@ import { TempDrivenFormComponent } from './temp-driven-form/temp-driven-form.com
     ReactFormsComponent,
     ReactForms1Component,
     TempDrivenFormComponent,
+    CorejavaComponent,
+    CorewebComponent,
+    AdvjavaComponent,
+    AdvwebComponent,
 
   ],
   imports: [
