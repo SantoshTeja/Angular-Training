@@ -7,6 +7,9 @@ import { AdvwebComponent } from '../advweb/advweb.component';
 import { CorewebComponent } from '../coreweb/coreweb.component';
 import { CorejavaComponent } from '../corejava/corejava.component';
 import { AdvjavaComponent } from '../advjava/advjava.component';
+import { ProductsComponent } from '../products/products.component';
+import { ReactForms1Component } from '../react-forms1/react-forms1.component';
+import { TempDrivenFormComponent } from '../temp-driven-form/temp-driven-form.component';
 const routes:Routes = [
   // {path:'web', component:WebComponent },
   // {path:'java', component:JavaComponent }
@@ -21,6 +24,9 @@ const routes:Routes = [
     {path:'advjava', component:AdvjavaComponent}
    ]
  },
+ {path:'products', component:ProductsComponent },
+ {path:'react-forms1', component: ReactForms1Component},
+ {path:'temp-driven-form', component: TempDrivenFormComponent},
 ]
 @NgModule({
   declarations: [],
@@ -30,4 +36,4 @@ const routes:Routes = [
   exports:[RouterModule]
 })
 export class TechRoutingModule { }
-export const routingComponents = [WebComponent,JavaComponent]
+export const routingComponents = [WebComponent,JavaComponent,ProductsComponent,ReactForms1Component,TempDrivenFormComponent]

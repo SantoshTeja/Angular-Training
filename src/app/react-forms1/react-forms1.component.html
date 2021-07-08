@@ -1,9 +1,9 @@
-<h2>Reactvie Forms</h2><hr>
+<h2>Module Driven Registration Form</h2><hr>
 <div class="container">
-<form [formGroup]='productForm' (ngSubmit)='submitData()'>
+<form [formGroup]='addressForm' (ngSubmit)='submitData()'>
     <div class='form-group'>
-        <label>Product Name</label>
-        <input type='text' formControlName='productName' class='form-control'>
+        <label>Name</label>
+        <input type='text' formControlName='Name' class='form-control'>
     </div>
     <div formGroupName="address">
         <div class='form-group'>
@@ -15,20 +15,20 @@
             <input type='text' formControlName='postalcode' class='form-control'>
         </div>
     </div>
-    <div *ngIf="productForm.get('productName')?.invalid && productForm.get('productName')?.touched">
-        <div *ngIf="productForm.get('productName')?.errors?.required" class='text text-danger'>ProductName is required</div>
-        <div *ngIf="productForm.get('productName')?.errors?.pattern" class='text text-danger'>Invalid Product Name (It must be b/w 5 to 9) </div>
+    <div *ngIf="addressForm.get('Name')?.invalid && addressForm.get('Name')?.touched">
+        <div *ngIf="addressForm.get('Name')?.errors?.required" class='text text-danger'>Name is required</div>
+        <div *ngIf="addressForm.get('Name')?.errors?.pattern" class='text text-danger'>Invalid Name (It must be letters with (a-z)) </div>
     </div>
-    <div *ngIf="productForm.get('city')?.invalid && productForm.get('city')?.touched">
-        <div *ngIf="productForm.get('city')?.errors?.required" class='text text-danger'>city is required</div>
-        <div *ngIf="productForm.get('city')?.errors?.pattern" class='text text-danger'>Invalid city (It must be b/w 5 to 9) </div>
+    <div *ngIf="addressForm.get('address.city')?.invalid && addressForm.get('address.city')?.touched">
+        <div *ngIf="addressForm.get('address.city')?.errors?.required" class='text text-danger'>city is required</div>
+        <div *ngIf="addressForm.get('address.city')?.errors?.pattern" class='text text-danger'>Invalid city (It must be letters with (a-z)) </div>
     </div>
-    <div *ngIf="productForm.get('postalcode')?.invalid && productForm.get('postalcode')?.touched">
-        <div *ngIf="productForm.get('postalcode')?.errors?.required" class='text text-danger'>postalcode is required</div>
-        <div *ngIf="productForm.get('postalcode')?.errors?.pattern" class='text text-danger'>Invalid postalcode (It must be b/w 5 to 9) </div>
+    <div *ngIf="addressForm.get('address.postalcode')?.invalid && addressForm.get('address.postalcode')?.touched">
+        <div *ngIf="addressForm.get('address.postalcode')?.errors?.required" class='text text-danger'>postalcode is required</div>
+        <div *ngIf="addressForm.get('address.postalcode')?.errors?.pattern" class='text text-danger'>Invalid postalcode (It must be b/w 5 to 9) </div>
     </div>
     <br>
-    <button [disabled]='!productForm.valid' type='submit' class='btn btn-success'>Submit</button>
+    <button [disabled]='!addressForm.valid' type='submit' class='btn btn-success'>Submit</button>
 </form>
 </div>
 

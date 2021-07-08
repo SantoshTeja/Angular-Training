@@ -18,17 +18,17 @@ export class ReactForms1Component {
   // })
   /*=============== With using FormBuilder API ================*/
   constructor(private formBuilder:FormBuilder){}
-  productForm = this.formBuilder.group({
-    productName: ['', [Validators.required, Validators.pattern('^[a-zA-z]{5,9}$')]],
+  addressForm = this.formBuilder.group({
+    Name: ['', [Validators.required, Validators.pattern('^[a-zA-z]{5,9}$')]],
     address : this.formBuilder.group({
-      city : [23],// city: ['', [Validators.required, Validators.pattern('^[a-zA-z]{5,9}$')]],
-      postalcode :[34]//postalcode: ['', [Validators.required, Validators.pattern('^[a-zA-z]{5,9}$')]]
+     city: ['', [Validators.required, Validators.pattern('^[a-zA-z]{5,9}$')]],
+    postalcode: ['', [Validators.required, Validators.pattern('^[0-9]{5,9}$')]]
     })
   })
 
   submitData() {
-    console.log(this.productForm)
-    console.log(this.productForm.value)
+    console.log(this.addressForm)
+    console.log(this.addressForm.value)
 
   }
 

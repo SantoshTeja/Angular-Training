@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>RegistrationForm</h2><hr>
+    <h2>Template Driven Registration Form</h2><hr>
     <form #userForm ='ngForm' (ngSubmit)='submitData(userForm.value)'>
         <div class='form-group'>
             <label>Name</label><input 
@@ -17,7 +17,7 @@
         <div class='form-group'>
             <label>City</label><input 
             type='text' 
-            #nameRef='ngModel' 
+            #cityRef='ngModel' 
             class='form-control' 
             name='uname' 
             ngModel
@@ -27,11 +27,38 @@
             pattern="[a-z]+"
             >
         </div>
+        <div class='form-group'>
+            <label>City</label><input 
+            type='text' 
+            #pcRef='ngModel' 
+            class='form-control' 
+            name='uname' 
+            ngModel
+            required
+            minlength="5"
+            maxlength="9"
+            pattern="[0-9]+"
+            >
+        </div>
         <div *ngIf='nameRef.errors && (nameRef.touched || nameRef.dirty)' class='text text-danger'>
 
             <div [hidden]='!nameRef.errors.required'>Please enter name</div>
             <div [hidden]='!nameRef.errors.minlength'>Please enter atlest 5 characters</div>
             <div [hidden]='!nameRef.errors.pattern'>Invalid User name</div>
+
+        </div>
+        <div *ngIf='cityRef.errors && (cityRef.touched || cityRef.dirty)' class='text text-danger'>
+
+            <div [hidden]='!cityRef.errors.required'>Please enter city</div>
+            <div [hidden]='!cityRef.errors.minlength'>Please enter atlest 3 characters</div>
+            <div [hidden]='!cityRef.errors.pattern'>Invalid city</div>
+
+        </div>
+        <div *ngIf='pcRef.errors && (pcRef.touched || pcRef.dirty)' class='text text-danger'>
+
+            <div [hidden]='!pcRef.errors.required'>Please enter postal code</div>
+            <div [hidden]='!pcRef.errors.minlength'>Please enter atlest 5 digits</div>
+            <div [hidden]='!pcRef.errors.pattern'>Invalid postal code</div>
 
         </div>
         <button [disabled]='!userForm.form.valid' type='submit' class='btn btn-success'>Submit</button>
